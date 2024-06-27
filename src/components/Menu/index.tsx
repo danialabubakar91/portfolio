@@ -1,23 +1,17 @@
-
-
 import Menu from './Menu.tsx'
 import MenuButton from './MenuButton.tsx'
+import MenuDropdown from './MenuDropdown.tsx'
+import MenuItem from './MenuItem.tsx'
 
-interface MenuSomething extends React.FC<{ shalin:string, children: React.ReactNode }>{
-    Button: typeof MenuButton
+interface MenuInterface extends React.FC<{children: React.ReactNode }>{
+    Button: typeof MenuButton;
+    Dropdown: typeof MenuDropdown;
+    Item: typeof MenuItem;
 }
 
+const all:MenuInterface = Menu as MenuInterface;
+all.Button = MenuButton;
+all.Dropdown = MenuDropdown;
+all.Item = MenuItem;
 
-const Result:MenuSomething = Menu as MenuSomething;
-Result.Button = MenuButton;
-
-
-// Object.assign(Menu, {Button:MenuButton});
-// const MenuSomething = Menu as MenuSomething;
-
-// Object.assign(Menu, {Button:MenuButton});
-
-// const MenuSomething = Menu as MenuSomething;
-
-
-export default Result;
+export default all;

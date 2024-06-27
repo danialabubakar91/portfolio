@@ -6,7 +6,7 @@ interface Props {
 
 const MenuButton:React.FC<Props> = ({children}:Props) => {
     return(
-        <button>{children}</button>
+        <button className="menu-btn">{children}</button>
     )
 }
 

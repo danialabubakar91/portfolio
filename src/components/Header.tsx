@@ -1,7 +1,5 @@
-import Result from './Menu/index.tsx'
-// import Menu from './Menu/Menu.tsx'
-// import MenuButton from './Menu/MenuButton.tsx'
-
+import Menu from './Menu/index.tsx'
+import './Header.css'
 
 const Header:React.FC = () => {
     return(
@@ -10,9 +8,14 @@ const Header:React.FC = () => {
                 <h1>Logo here</h1>
                 <h1>DANIAL</h1>
             </div>
-            <Result shalin={"kupu"}>
-                <Result.Button>Menu</Result.Button>
-            </Result>
+            <Menu>
+                <Menu.Button>Menu</Menu.Button>
+                <Menu.Dropdown>
+                    <Menu.Item path={"/"}>Home</Menu.Item>
+                    <Menu.Item path={"/projects"}>Projects</Menu.Item>
+                    <Menu.Item path={"/resume"}>Resume</Menu.Item>
+                </Menu.Dropdown>
+            </Menu>
         </header>
     )
 }

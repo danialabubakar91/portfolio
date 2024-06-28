@@ -1,12 +1,14 @@
 import React from 'react'
+import { MenuContext } from "./Menu.tsx"
 
 interface Props {
-    children: React.ReactNode
+    children: React.ReactNode;
 }
 
 const MenuButton:React.FC<Props> = ({children}:Props) => {
+    const {runToggle} = React.useContext(MenuContext);
     return(
-        <button className="menu-btn">{children}</button>
+        <button onClick={runToggle} className="menu-btn">{children}</button>
     )
 }
 

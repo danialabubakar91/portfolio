@@ -8,9 +8,9 @@ header{
     background-color: gray;
 }
 
-.menu-nav{
+/* .menu-nav{
     display:none;
-}
+} */
 
 @media only screen and (min-width:576px){
     .menu-btn{
